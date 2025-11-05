@@ -22,6 +22,7 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* Add this line to allow items to wrap */
 }
 
 .navbar ul li {
@@ -85,7 +86,9 @@ main {
 
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column;
+        flex-direction: row; /* Keep it row-based even on smaller screens */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-between; /* Distribute items */
     }
 
     .container .row {
